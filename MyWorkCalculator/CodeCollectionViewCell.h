@@ -2,7 +2,7 @@
 //  CodeCollectionViewCell.h
 //  MyWorkCalculator
 //
-//  Created by Jimmy Flores on 2014-10-26.
+//  Created by Jimmy Flores on 2014-10-28.
 //  Copyright (c) 2014 JimmyFlores. All rights reserved.
 //
 
@@ -10,6 +10,6 @@
 
 @interface CodeCollectionViewCell : UICollectionViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end

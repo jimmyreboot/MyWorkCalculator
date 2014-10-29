@@ -15,9 +15,9 @@
 		DE37D8E319F6015300BAD315 /* MyWorkCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE37D8E219F6015300BAD315 /* MyWorkCalculatorTests.m */; };
 		DE4C07B319FA001800AECC1D /* CodeData.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4C07B219FA001800AECC1D /* CodeData.m */; };
 		DE4C07B619FA115400AECC1D /* NewEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4C07B519FA115400AECC1D /* NewEntryViewController.m */; };
+		DE5EA2A91A0070380024DE5A /* CodeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5EA2A81A0070380024DE5A /* CodeCollectionViewCell.m */; };
 		DEEE175819FD854C008F8F1F /* CodeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEE175719FD854C008F8F1F /* CodeCollectionViewController.m */; };
 		DEEE175B19FDA003008F8F1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEE175A19FDA003008F8F1F /* ViewController.m */; };
-		DEEE175E19FDE962008F8F1F /* CodeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEE175D19FDE962008F8F1F /* CodeCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,12 +46,12 @@
 		DE4C07B219FA001800AECC1D /* CodeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeData.m; sourceTree = "<group>"; };
 		DE4C07B419FA115400AECC1D /* NewEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEntryViewController.h; sourceTree = "<group>"; };
 		DE4C07B519FA115400AECC1D /* NewEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEntryViewController.m; sourceTree = "<group>"; };
+		DE5EA2A71A0070380024DE5A /* CodeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeCollectionViewCell.h; sourceTree = "<group>"; };
+		DE5EA2A81A0070380024DE5A /* CodeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeCollectionViewCell.m; sourceTree = "<group>"; };
 		DEEE175619FD854C008F8F1F /* CodeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeCollectionViewController.h; sourceTree = "<group>"; };
 		DEEE175719FD854C008F8F1F /* CodeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeCollectionViewController.m; sourceTree = "<group>"; };
 		DEEE175919FDA003008F8F1F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DEEE175A19FDA003008F8F1F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DEEE175C19FDE962008F8F1F /* CodeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeCollectionViewCell.h; sourceTree = "<group>"; };
-		DEEE175D19FDE962008F8F1F /* CodeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +93,8 @@
 		DE37D8C519F6015300BAD315 /* MyWorkCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				DEEE175C19FDE962008F8F1F /* CodeCollectionViewCell.h */,
-				DEEE175D19FDE962008F8F1F /* CodeCollectionViewCell.m */,
+				DE5EA2A71A0070380024DE5A /* CodeCollectionViewCell.h */,
+				DE5EA2A81A0070380024DE5A /* CodeCollectionViewCell.m */,
 				DEEE175919FDA003008F8F1F /* ViewController.h */,
 				DEEE175A19FDA003008F8F1F /* ViewController.m */,
 				DEEE175619FD854C008F8F1F /* CodeCollectionViewController.h */,
@@ -245,7 +245,7 @@
 				DE4C07B319FA001800AECC1D /* CodeData.m in Sources */,
 				DEEE175819FD854C008F8F1F /* CodeCollectionViewController.m in Sources */,
 				DE37D8C919F6015300BAD315 /* main.m in Sources */,
-				DEEE175E19FDE962008F8F1F /* CodeCollectionViewCell.m in Sources */,
+				DE5EA2A91A0070380024DE5A /* CodeCollectionViewCell.m in Sources */,
 				DE4C07B619FA115400AECC1D /* NewEntryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

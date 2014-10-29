@@ -9,7 +9,6 @@
 #import "CodeCollectionViewController.h"
 #import "CodeCollectionViewCell.h"
 
-
 @interface CodeCollectionViewController ()
 
 @end
@@ -25,7 +24,9 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
+    //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
+    
+    /*[self.collectionView registerClass:[CodeCollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier]; */
     
     // Do any additional setup after loading the view.
     CodeData *codeData = [[CodeData alloc] init];
@@ -65,30 +66,39 @@ static NSString * const reuseIdentifier = @"Cell";
     return [_codeArray count];
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-     //CodeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+- (CodeCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    //CodeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+     CodeCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     
     // Configure the cell
     
     //UILabel *label = (UILabel *) [cell viewWithTag:10];
     
-    UILabel *label = [[UILabel alloc] init] ;
-    label.tag = 10;
+    //UILabel *label = [[UILabel alloc] init] ;
+    //label.tag = 10;
     
     //[cell.contentView addSubview:label];
     
-    label.text = [_codeArray objectAtIndex: indexPath.row];
+    //label.text = [_codeArray objectAtIndex: indexPath.row];
     
     //cell.label.text = [_codeArray objectAtIndex: indexPath.row];
+    NSString *codeText = [_codeArray objectAtIndex: indexPath.row];
+
+    NSLog(@"%@", codeText);
+    
+    cell.label.text = codeText;
+    //cell.label.text = [[UIColor whiteColor].CGColor];
+    
+    //label.textColor = [UIColor greenColor];
     
     [cell.layer setBorderWidth:1.0f];
     [cell.layer setBorderColor:[UIColor whiteColor].CGColor];
-    //[cell.layer setBackgroundColor:[UIColor whiteColor].CGColor];
-    [cell.layer setCornerRadius: 5.0f];
+    [cell.layer setBackgroundColor:[UIColor whiteColor].CGColor];
+    [cell.layer setCornerRadius: 8.0f];
     
-    NSLog(@"%@", label.text);
+    
+   // NSLog(@"%@", label.text);
     
     return cell;
 }
