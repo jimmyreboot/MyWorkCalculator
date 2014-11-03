@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) NSArray *codeArray;
 @property (strong, nonatomic) NSMutableArray *selectedCodesArray;
+@property (nonatomic) int *count;
 
 @end

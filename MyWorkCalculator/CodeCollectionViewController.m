@@ -29,6 +29,8 @@ static NSString * const reuseIdentifier = @"Cell";
     /*[self.collectionView registerClass:[CodeCollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier]; */
     
     // Do any additional setup after loading the view.
+    _count = 0;
+    
     CodeData *codeData = [[CodeData alloc] init];
     
     _codeArray = codeData.codeArray;
@@ -116,6 +118,20 @@ static NSString * const reuseIdentifier = @"Cell";
     NSLog(@"%@", aCell.label.text);
     
     [_selectedCodesArray addObject: aCell.label.text];
+    
+    
+    //create some data
+    //NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
+             //             @"BCIT", @"school", nil];
+    NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
+                          [NSNumber numberWithInt:*(_count)], _selectedCodesArray, nil];
+    
+    //notify and pass data
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"codeSelectionChanged" object:nil userInfo:data];
+
+    _count++;
+    
     
     
 }

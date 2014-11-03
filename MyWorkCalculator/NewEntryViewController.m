@@ -28,6 +28,11 @@
     _todaysDate = [formater stringFromDate:[NSDate date]];
     _dateLabel.text = _todaysDate;
     
+    //Listen for a notification
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(notificationRecieved:)
+                                                 name:@"codeSelectionChanged" object:nil];
+    
     //UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     //CodeCollectionViewController
     //CodeCollectionViewController *codeCollectionViewController = [[CodeCollectionViewController alloc] init];
@@ -37,10 +42,26 @@
         
 }
 
+//get notification and data
+-(void)notificationRecieved:(NSNotification *)notification{
+    NSDictionary *temp = [notification userInfo];
+    //NSLog(@"%@", [temp objectForKey:@"school"]);
+    //self.myLabel.text = [temp objectForKey:@"school"];
+    _selectedCode = [temp allValues];
+    
+    
+    
+    
+    NSLog(@"It works");
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation

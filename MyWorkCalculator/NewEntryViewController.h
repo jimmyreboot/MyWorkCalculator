@@ -11,7 +11,14 @@
 
 @interface NewEntryViewController : UIViewController
 
+@property(nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property(nonatomic, weak) IBOutlet UILabel *dateLabel;
 @property(nonatomic, weak) NSString *todaysDate;
+
+//@property(nonatomic, weak) NSMutableArray *selectedCodes;
+
+@property(nonatomic, weak) NSArray *selectedCode;
+
+
 
 @end
