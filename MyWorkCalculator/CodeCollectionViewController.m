@@ -105,6 +105,21 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark <UICollectionViewDelegate>
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionViewCell *theCell = [self.collectionView cellForItemAtIndexPath:indexPath];
+    
+    //CodeCollectionViewCell *theCell = [self.collectionView cellForItemAtIndexPath:indexPath];
+
+    CodeCollectionViewCell *aCell = (CodeCollectionViewCell *)theCell;
+    
+    NSLog(@"%@", aCell.label.text);
+    
+    [_selectedCodesArray addObject: aCell.label.text];
+    
+    
+}
+
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {

@@ -12,5 +12,6 @@
 @interface CodeCollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (strong, nonatomic) NSArray *codeArray;
+@property (strong, nonatomic) NSMutableArray *selectedCodesArray;
 
 @end
